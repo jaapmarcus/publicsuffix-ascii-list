@@ -14,7 +14,7 @@ fi
 if  echo "$tld" | grep '// ===END ICANN DOMAINS===' > /dev/null; then
     break
 fi
-done < /list/public_suffix_list.dat
+done < ./list/public_suffix_list.dat
 
 if [ -f "public_suffix_ascii_list.dat" ]; then
     touch public_suffix_ascii_list.dat
