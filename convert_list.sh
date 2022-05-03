@@ -2,8 +2,7 @@
 apt-get update
 apt-get install git idn2 wget -y
 wget https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
-CHARSET="UTF-8"
-export LC_ALL=en_US.UTF-8
+export LC_ALL=C
 stop=0;
 while read -r tld; do
 
