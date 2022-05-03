@@ -1,6 +1,7 @@
 #!/bin/bash 
 
-curl https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
+git clone https://github.com/publicsuffix/list.git
+
 
 while read -r tld; do
 
@@ -12,7 +13,7 @@ fi
 if  echo "$tld" | grep '// ===END ICANN DOMAINS===' > /dev/null; then
     break
 fi
-done < public_suffix_list.dat
+done < /list/public_suffix_list.dat
 
 if [ -f "public_suffix_ascii_list.dat" ]; then
     touch public_suffix_ascii_list.dat
