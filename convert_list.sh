@@ -23,7 +23,7 @@ fi
 if diff public_suffix_ascii_list.dat public_suffix_ascii_list.new.dat; then
     rm  public_suffix_ascii_list.dat
     mv  public_suffix_ascii_list.new.dat public_suffix_ascii_list.dat
-    git addd public_suffix_ascii_list.dat
+    git add public_suffix_ascii_list.dat
     git commit -m "Update Public suffix list"
     git push
 fi 
