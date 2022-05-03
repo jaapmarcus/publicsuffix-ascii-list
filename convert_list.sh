@@ -8,7 +8,9 @@ while read -r tld; do
 
 if [ -n "$tld" ]; then
     if ! echo "$tld" | grep '//' > /dev/null; then
-        idn2 --quiet "$tld" >> public_suffix_ascii_list.new.dat 
+        echo "$tld"
+        out=$(idn2 --quiet "$tld")
+        echo $out >> public_suffix_ascii_list.new.dat 
     fi
 fi
 if  echo "$tld" | grep '// ===END ICANN DOMAINS===' > /dev/null; then
