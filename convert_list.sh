@@ -1,6 +1,6 @@
 #!/bin/bash 
-#apt-get update
-#apt-get install git idn2 -y
+apt-get update
+apt-get install git idn2 wget -y
 wget https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
 CHARSET="UTF-8"
 export LC_ALL=en_US.UTF-8
@@ -17,7 +17,7 @@ if  echo "$tld" | grep 'END ICANN DOMAINS' > /dev/null; then
     echo "STOP"
     break
 fi
-done < ./list/public_suffix_list.dat
+done < ./public_suffix_list.dat
 
 if [ -f "public_suffix_ascii_list.dat" ]; then
     touch public_suffix_ascii_list.dat
