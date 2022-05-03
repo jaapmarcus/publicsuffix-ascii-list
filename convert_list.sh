@@ -1,7 +1,7 @@
 #!/bin/bash 
-apt-get update
-apt-get install git idn2 -y
-git clone https://github.com/publicsuffix/list.git
+#apt-get update
+#apt-get install git idn2 -y
+wget https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
 CHARSET="UTF-8"
 export LC_ALL=en_US.UTF-8
 while read -r tld; do
