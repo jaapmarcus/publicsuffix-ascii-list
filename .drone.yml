@@ -1,13 +1,13 @@
 kind: pipeline
 type: docker
-name: Push to beta atp server
+name: Creeate ascii based list
 
 platform:
   os: linux
   arch: amd64
 
 steps:
-  - name: 
+  - name: Create ascii based list
     image: debian:bullseye
     commands:
     - ./convert_list.sh
