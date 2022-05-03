@@ -1,6 +1,6 @@
 #!/bin/bash 
 apt-get update
-apt-get install git
+apt-get install git -y
 git clone https://github.com/publicsuffix/list.git
 
 
