@@ -1,0 +1,16 @@
+kind: pipeline
+type: docker
+name: Push to beta atp server
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: 
+    image: debian:bullseye
+    commands:
+    - ./convert_list.sh
+    
+trigger:
+       event: [ push ] 
