@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-wget https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
+curl https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat
 
 while read -r tld; do
 
