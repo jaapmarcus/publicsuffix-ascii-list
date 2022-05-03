@@ -2,7 +2,7 @@
 apt-get update
 apt-get install git idn2 -y
 git clone https://github.com/publicsuffix/list.git
-
+CHARSET="UTF-8"
 
 while read -r tld; do
 
