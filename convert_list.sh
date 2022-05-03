@@ -13,7 +13,8 @@ if [ -n "$tld" ]; then
         echo $out >> public_suffix_ascii_list.new.dat 
     fi
 fi
-if  echo "$tld" | grep '// ===END ICANN DOMAINS===' > /dev/null; then
+if  echo "$tld" | grep 'END ICANN DOMAINS' > /dev/null; then
+    echo "STOP"
     break
 fi
 done < ./list/public_suffix_list.dat
