@@ -12,11 +12,11 @@ steps:
     commands:
     - ./convert_list.sh
   - name: push commit
-  image: appleboy/drone-git-push
-  settings:
-    remote_name: origin
-    branch: main
-    force: false
-    commit: true
+    image: appleboy/drone-git-push
+    settings:
+      remote_name: origin
+      branch: main
+      force: false
+      commit: true
 trigger:
        event: [ push ] 
