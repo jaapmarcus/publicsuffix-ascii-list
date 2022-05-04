@@ -11,14 +11,14 @@ steps:
     image: debian:bullseye
     commands:
     - ./convert_list.sh
-  - name: Commit changes
+  - name: push
     image: appleboy/drone-git-push
     settings:
-      remote_name: orgin
-      branch: main
-      key: 
-        from_secret: ssh_key
-      force: false
-      commit: true
+    branch:  main
+    remote: git@github.com:jaapmarcus/publicsuffix-ascii-list.git
+    commit: true
+    commit_message: test
+    ssh_key:
+      from_secret: ssh_key
 trigger:
        event: [ push ] 
