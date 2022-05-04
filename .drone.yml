@@ -15,7 +15,6 @@ steps:
     image: appleboy/drone-git-push
     settings:
       branch: main
-      remote: git@github.com:jaapmarcus/publicsuffix-ascii-list.git
       key: 
         from_secret: ssh_key
       force: false
