@@ -26,7 +26,7 @@ diff -q $dst $new public_suffix_ascii_list.dat public_suffix_ascii_list.new.dat 
 if [ $? ]; then
     echo "Commit changes"
     rm public_suffix_ascii_list.dat 
-    mv public_suffix_ascii_list.new.dat public_suffix_ascii_list.dat
+    cp public_suffix_ascii_list.new.dat public_suffix_ascii_list.dat
 fi 
 
 rm public_suffix_ascii_list.new.dat
