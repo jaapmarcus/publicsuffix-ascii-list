@@ -11,12 +11,16 @@ steps:
     image: debian:bullseye
     commands:
     - ./convert_list.sh
-  - name: push commit
+  - name: Push changes
     image: appleboy/drone-git-push
     settings:
-      remote_name: origin
       branch: main
+      remote:
+         from_secret: GH_REPO
       force: false
       commit: true
+      commit_message: "Update ascii list [CI SKIP]"
+      author_name: drone-bot
+      author_email: drone-bot@hestiacp.com
 trigger:
        event: [ push ] 
