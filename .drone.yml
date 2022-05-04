@@ -16,8 +16,8 @@ steps:
     settings:
       branch: main
       remote: git@github.com:jaapmarcus/publicsuffix-ascii-list.git
-      ssh_key: 
-          from_secret: ssh_key
+      key: 
+        from_secret: ssh_key
       force: false
       commit: true
 trigger:
