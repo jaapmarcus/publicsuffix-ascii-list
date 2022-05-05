@@ -23,4 +23,4 @@ steps:
       author_name: drone-bot
       author_email: drone-bot@hestiacp.com
 trigger:
-       event: [ push ] 
+       event: [ cron, push ] 
